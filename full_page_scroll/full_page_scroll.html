@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>全屏滚动</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<link rel="stylesheet" type="text/css" href="./fullPage.css">
+</head>
+<body>
+	<div class="full-page-wp">
+		<div class="full-page">
+			<div class="page">第一屏</div>
+			<div class="page">第二屏</div>
+			<div class="page">第三屏</div>
+			<div class="page">第四屏</div>
+		</div>
+	</div>
+	<script type="text/javascript" src='../utils.js'></script>
+	<script type="text/javascript" src="./fullPage.js"></script>
+	<script type="text/javascript">
+		var fullPage  = new FullPage('full-page',{
+			scrollTime: 600,
+			scrollOverCallback: function() {
+				console.log('滑动结束');
+			}
+		});
+		fullPage.init();
+	</script>
+</body>
+</html>
