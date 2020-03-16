@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>下拉刷新</title>
+    <!-- 假设屏幕宽750px,则1vw为7.5px -->
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            overflow: hidden;
+        }
+        .container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .content {
+            position: relative;
+            width: 100%;
+            transition: transform .5s ease-in-out;
+        }
+        .refresh {
+            position: absolute;
+            left: 0;
+            top: -6vh;
+            width: 100%;
+            height: 6vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4vw;
+            color: #999;
+        }
+        ul {
+            height: 100vh;
+            background-color: rgba(128,128,128,.3);
+            overflow: auto;
+        }
+        li {
+            position: relative;
+            height: 20vw;
+            line-height: 20vw;
+            text-align: center;
+        }
+        li:after {
+            display: block;
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #999;
+            transform: scaleY(.5);
+        }
+        .bottom {
+            height: 20vw;
+            line-height: 20vw;
+            text-align: center;
+        }
+        .iconfont {
+            width: 6vw;
+            height: 6vw;
+            font-size: 6vw;
+            margin-right: 3vw;
+        }
+        .iconchenggong {
+            color: green;
+        }
+        .loading {
+            display: inline-block;
+            width: 8vw;
+            height: 7vw;
+            background: url('./loading.gif') no-repeat center / 7vw 7vw ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content" id="content">
+            <div class="refresh" id="refresh">下拉刷新</div>
+            <ul class="list" id="list">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+            </ul>
+            <div class="bottom">
+                上拉加载中...
+            </div>
+        </div>
+    </div>
+    <script src="throttle.js"></script>
+    <script>
+        // 开始滚动的位置
+        var startY = 0;
+        // 结束滚动的位置
+        var endY = 0;
+        // 滚动的差值
+        var diff = 0;
+        // 是否请求中，防止频繁刷新
+        var isRequesting = false;
+        // 是否在列表scrollTop = 0的时候开始下拉的
+        var canreFresh = false;
+        // 最多拖动的距离
+        var distance = 48;
+        // 下拉刷新
+        var html1 = "<i class='iconfont iconjiantouarrow505'></i>下拉刷新";
+        var html2 = "<i class='iconfont iconjiantouarrow499'></i>释放立即刷新";
+        var html3 = "<i class='iconfont loading'></i>正在刷新...";
+        var html4 = "<i class='iconfont iconchenggong'></i>刷新成功";
+        var list = getEle('list');
+        var content = getEle('content');
+        var refreshWp = getEle('refresh');
+        var moveFun = throttle(move,50);
+
+        list.addEventListener('touchstart',(e)=>{
+            touchStart(e);
+        },false);
+
+        list.addEventListener('touchmove',(e)=>{
+            if(!isRequesting) {
+                console.log('又刷了');
+                touchmove(e);
+            }
+        },false);
+
+        list.addEventListener('touchend',(e)=>{
+          touchEnd();
+        },false);
+
+        function touchStart(e) {
+            canRefresh = list.scrollTop == 0;
+            startY = e.changedTouches[0].clientY;
+        }
+
+        function touchmove(e) {
+            if(canRefresh) {
+                refreshWp.innerHTML = html1;
+                moveFun(e);
+            }
+            if(diff >= distance) {
+                refreshWp.innerHTML = html2;
+            }
+        }
+
+        function touchEnd() {
+            if(diff < distance) { // 下拉距离不足100,不刷新
+                content.style.transform = 'translateY(0)';
+                return;
+            }
+            if(isRequesting) return;
+            if(diff > distance) diff = distance; 
+            if(diff >0 && diff >= distance) {
+                isRequesting = true;
+                refreshWp.innerHTML = html3;
+                // 模拟异步请求
+                setTimeout(() =>{
+                    refreshWp.innerHTML = html4;
+                    setTimeout(() => {
+                        var index = list.firstElementChild.innerHTML;
+                        var li = document.createElement('li');
+                        li.innerHTML = --index;
+                        list.insertBefore(li,list.firstElementChild);
+                        content.style.transform = 'translateY(0)';
+                        isRequesting = false;
+                    },800)
+                },1500)
+            }
+        }
+
+        function move(e) {
+            endY = e[0].changedTouches[0].clientY;
+            diff = parseInt(endY - startY);
+            if(diff >0 ) {
+                diff = Math.min(diff,distance);
+                content.style.transform = `translateY(${diff/7.5}vh)`;
+            }
+        }
+
+        function getEle(id) {
+            return document.getElementById(id);
+        }
+
+
+    </script>
+</body>
+</html>
