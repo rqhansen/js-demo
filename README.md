@@ -20,14 +20,14 @@ JS + CSS3 + vw + iconfont
 
 ### 下拉刷新
 
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/pull-down-refresh.gif" width="235" height="458"/>
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/pull-down-refresh.gif" width="255" height="400"/>
 
 ### 全屏滚动
 
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/full-page-scroll.gif" width="235" height="458"/>
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/full-page-scroll.gif" width="255" height="400"/>
 
 ### 滑出下拉菜单
 
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/drop-menu.gif" width="235" height="458"/>
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/drop-menu.gif" width="255" height="400"/>
 
 
