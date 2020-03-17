@@ -22,4 +22,12 @@ JS + CSS3 + vw + iconfont
 
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/pull-down-refresh.gif"/>
 
+### 全屏滚动
+
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/full-page-scroll.gif"/>
+
+### 滑出下拉菜单
+
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/drop-menu.gif"/>
+
 
