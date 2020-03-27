@@ -120,10 +120,10 @@
         let isRequesting = false;
         // 可以刷新了
         let canPullDownReFresh = false;
-        // 滑动到distance触发刷新
-        let distance = 48;
-
         let clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        // 滑动到distance触发刷新
+        // let distance = 48 * clientHeight / 750;
+        let distance = 48;
 
         // 下拉刷新
         let status1 = "<i class='iconfont iconjiantouarrow505'></i>下拉刷新";
@@ -180,8 +180,10 @@
                 list.scrollTop = 0;
                 setTimeout(() =>{
                     setTransform(0);
-                    isRequesting = false;
-                    diff = 0;
+                    setTimeout(() =>{
+                        isRequesting = false;
+                        diff = 0;
+                    },500)
                 },500)
             },1500)
         }
