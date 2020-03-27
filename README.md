@@ -13,7 +13,7 @@
 
 ## 技术栈 
 
-JS + CSS3 + vw + iconfont
+JS + CSS3 + iconfont 
 
 
 ##  效果
