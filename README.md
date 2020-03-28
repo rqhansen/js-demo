@@ -8,6 +8,7 @@
 下拉菜单
 全屏滚动
 下拉刷新
+Loading
 ...
 
 
@@ -29,5 +30,9 @@ JS + CSS3 + iconfont
 ### 滑出下拉菜单
 
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/drop-menu.gif" width="235" height="458"/>
+
+### 加载中
+
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/loading.gif" width="235" height="458"/>
 
 
