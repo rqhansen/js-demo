@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <title>下拉刷新</title>
     <!-- 假设屏幕宽750px,则1vw为7.5px -->
-    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
     <style>
         * {
             padding: 0;
@@ -43,6 +43,7 @@
             height: 100vh;
             background-color: rgba(128,128,128,.3);
             overflow: auto;
+            -webkit-overflow-scrolling: touch;
         }
         li {
             position: relative;
@@ -61,11 +62,6 @@
             background-color: #999;
             transform: scaleY(.5);
         }
-        .bottom {
-            height: 20vw;
-            line-height: 20vw;
-            text-align: center;
-        }
         .iconfont {
             width: 6vw;
             height: 6vw;
@@ -79,7 +75,7 @@
             display: inline-block;
             width: 6vw;
             height: 6vw;
-            background: url('./loading.gif') no-repeat center / 6vw 6vw ;
+            background: url('../images/loading.gif') no-repeat center / 6vw 6vw ;
         }
     </style>
 </head>
@@ -103,12 +99,9 @@
                 <li>13</li>
                 <li>14</li>
             </ul>
-            <!-- <div class="bottom">
-                上拉加载中...
-            </div> -->
         </div>
     </div>
-    <script src="throttle.js"></script>
+    <script src="../utils/throttle.js"></script>
     <script>
         // 开始滚动的位置
         let startY = 0;

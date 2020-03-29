@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>上拉加载</title>
+    <!-- 假设屏幕宽750px,则1vw为7.5px -->
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .rq-pull-up {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .rq-pull-up-wrap {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .rq-pull-up-list {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            background-color: rgba(128,128,128,.3);
+        }
+
+        .rq-pull-up-list li {
+            position: relative;
+            height: 20vw;
+            line-height: 20vw;
+            text-align: center;
+        }
+
+        .rq-pull-up-list li:not(:last-child):after {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #999;
+            transform: scaleY(0.5);
+            -webkit-transform: scaleY(0.5);
+        }
+
+        .rq-pull-up-loading {
+            width: 100%;
+            height: 6vh;
+            line-height: 6vh;
+            margin-bottom: -6vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4vw;
+            color: #999;
+        }
+
+        .iconfont {
+            width: 6vw;
+            height: 6vw;
+            font-size: 6vw;
+            margin-right: 3vw;
+        }
+        .loading {
+            display: inline-block;
+            width: 6vw;
+            height: 6vw;
+            background: url('../images/loading.gif') no-repeat center / 6vw 6vw ;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="rq-pull-up">
+        <div id="rqPullUp" class="rq-pull-up-wrap">
+            <ul id="rqList" class="rq-pull-up-list">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+            </ul>
+            <div id="rqLoading" class="rq-pull-up-loading"><i class='iconfont loading'></i>加载中...</div>
+        </div>
+    </div>
+    <script src="../utils/throttle.js"></script>
+    <script>
+        let startY = 0;
+        let diffY = 0;
+        let swipeOffSetY = 0;
+        // 至少滑动了minSwipeDistance才能触发下拉刷新
+        let minSwipeDis = -90;
+        let minDistance = -48; // 列表固定偏移距离
+        let isRequest = false;
+        let clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.client;
+        let throttleMove = throttle(move,50); 
+
+        let list = getEleById('rqList');
+        let pullUpWrap = getEleById('rqPullUp');
+        let rqLoading = getEleById('rqLoading');
+
+        list.addEventListener('touchstart',(e) => {
+            touchStart(e);
+        },false);
+
+        list.addEventListener('touchmove',(e) => {
+            touchMove(e);
+        },false);
+
+        list.addEventListener('touchend',(e) => {
+            touchEnd(e);
+        },false);
+
+        function touchStart(e) {
+            startY = getClientY(e);
+            pullUpWrap.style.transition = 'all .5s linear';
+        }
+
+        function touchMove(e) {
+            if(isRequest) return;
+            throttleMove(e);
+        }
+
+        function touchEnd() {
+            if(diffY > 0) return;
+            if(!canMove()) return;
+            if(diffY > -90) {
+                setTransform(0);
+                return;
+            }
+            if(isRequest) return;
+            isRequest = true;
+            setTimeout(() => {
+                updateData();
+                pullUpWrap.style.transition = 'all 0s linear';
+                setTimeout(() => {
+                    setTransform(0);
+                    list.scrollTop = list.scrollTop - swipeOffSetY;
+                    isRequest = false;
+                    diffY = 0;
+                },20)
+            },1500)
+
+        }
+
+        function move(argument) {
+            if(isRequest) return;
+            diffY = parseInt(getClientY(argument[0]) - startY);
+            if(diffY < 0 && diffY <= minSwipeDis) {
+                if(canMove()) {
+                    swipeOffSetY = Math.max(diffY,minDistance) * clientHeight / 750;
+                    setTransform(swipeOffSetY);
+                }
+            }
+        }
+
+        // 模拟更新数据
+        function updateData() {
+            let index = list.lastElementChild.innerHTML;
+            let li = document.createElement('li');
+            li.innerHTML = ++index;
+            list.appendChild(li,list.firstElementChild);
+        }
+
+        function setTransform(diffY) {
+            pullUpWrap.style.transform = `translate3d(0,${diffY}px,0)`;
+        }
+
+        function canMove() {
+            return list.scrollHeight - clientHeight <= Math.ceil(list.scrollTop);
+        }
+        
+        function getClientY(e) {
+            return e.changedTouches[0].clientY;
+        }
+
+        function getEleById(id) {
+            return document.getElementById(id);
+        }
+    </script>
+</body>
+</html>
