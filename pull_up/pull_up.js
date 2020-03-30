@@ -1,7 +1,6 @@
 ;(function() {
     let startY = 0;
     let diffY = 0;
-    let swipeOffSetY = 0;
     // 至少滑动了minSwipeDistance才能触发下拉刷新
     let minSwipeDis = -90;
     let minDistance = -48; // 容器在y轴的偏移距离

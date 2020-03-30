@@ -1,11 +1,20 @@
 ;(function(window,document) {
-    let btn = getEleById('rqBtn');
-    let indictor = getEleById('rqIndictor');
+    let btn1 = getEleById('rqBtn1');
+    let btn2 = getEleById('rqBtn2')
+    let indictor1 = getEleById('rqIndictor1');
+    let indictor2 = getEleById('rqIndictor2');
     
-    btn.addEventListener('click',() => {
-        indictor.classList.add('show');
+    btn1.addEventListener('click',() => {
+        indictor1.classList.add('show');
         setTimeout(() => {
-            indictor.classList.remove('show');
+            indictor1.classList.remove('show');
+        },2000);
+    },false);
+
+    btn2.addEventListener('click',() => {
+        indictor2.classList.add('show');
+        setTimeout(() => {
+            indictor2.classList.remove('show');
         },2000);
     },false);
     

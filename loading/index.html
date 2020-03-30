@@ -9,9 +9,11 @@
 </head>
 <body>
     <div class="rq-btn-wrap">
-        <button id="rqBtn">点击弹出indictor</button>
+        <button id="rqBtn1">点击弹出圆indictor</button>
+        <button id="rqBtn2">点击弹出点indictor</button>
     </div>
-    <div id="rqIndictor" class="rq-indictor">
+    <!-- 圆形加载 -->
+    <div id="rqIndictor1" class="rq-indictor">
         <div class="rq-indictor-wrap">
             <div class="rq-indictor-spin">
                 <div class="rq-indictor-snake"></div>
@@ -19,7 +21,29 @@
             </div>
         </div>
         <div class="rq-indictor-mask"></div>
-        <script src="./loading.js"></script>
     </div>
+    <!-- 点状加载 -->
+    <div id="rqIndictor2" class="rq-indictor rq-spot-indictor">
+        <div class="rq-indictor-wrap">
+            <div class="rq-indictor-spin">
+                <div class="rq-spin-fade-circle-wrap">
+                    <div class="rq-spin-fade-circle rq-circle-1"></div>
+                    <div class="rq-spin-fade-circle rq-circle-2"></div>
+                    <div class="rq-spin-fade-circle rq-circle-3"></div>
+                    <div class="rq-spin-fade-circle rq-circle-4"></div>
+                    <div class="rq-spin-fade-circle rq-circle-5"></div>
+                    <div class="rq-spin-fade-circle rq-circle-6"></div>
+                    <div class="rq-spin-fade-circle rq-circle-7"></div>
+                    <div class="rq-spin-fade-circle rq-circle-8"></div>
+                    <div class="rq-spin-fade-circle rq-circle-9"></div>
+                    <div class="rq-spin-fade-circle rq-circle-10"></div>
+                    <div class="rq-spin-fade-circle rq-circle-11"></div>
+                    <div class="rq-spin-fade-circle rq-circle-12"></div>
+                </div>
+            </div>
+        </div>
+        <div class="rq-indictor-mask"></div>
+    </div>
+    <script src="./loading.js"></script>
 </body>
 </html>

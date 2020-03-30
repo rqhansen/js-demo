@@ -38,6 +38,6 @@ JS + CSS3 + iconfont + Svg
 
 ### Loading
 
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/loading.gif" width="235" height="458"/>
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/circle-loading.gif" width="235" height="458"/><img src="https://github.com/rqhansen/images/blob/master/js-demo/spot-loading.gif" width="235" height="458"/>
 
 
