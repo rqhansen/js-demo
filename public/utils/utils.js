@@ -1,5 +1,4 @@
 
-
 //获取css3属性在不同浏览器中的表达
 function getWholeCssProperty(property) {
 	var cases = ['-webkit-','-moz-','-ms-','-o-',''];

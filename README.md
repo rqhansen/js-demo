@@ -1,5 +1,5 @@
 
-# 原生JS写的小效果
+# JS小效果
 
 
 ## 描述
@@ -15,10 +15,18 @@ Loading
 
 ## 技术栈 
 
-JS + CSS3 + iconfont 
+JS + CSS3 + iconfont + Svg
 
 
 ##  效果
+
+### 下拉菜单
+
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/drop-menu.gif" width="235" height="458"/>
+
+### 全屏滚动
+
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/full-page-scroll.gif" width="235" height="458"/>
 
 ### 下拉刷新
 
@@ -28,15 +36,7 @@ JS + CSS3 + iconfont
 
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/pull-up-refresh.gif" width="235" height="458"/>
 
-### 全屏滚动
-
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/full-page-scroll.gif" width="235" height="458"/>
-
-### 滑出下拉菜单
-
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/drop-menu.gif" width="235" height="458"/>
-
-### 加载中
+### Loading
 
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/loading.gif" width="235" height="458"/>
 

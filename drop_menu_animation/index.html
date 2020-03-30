@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>下拉菜单动画效果</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="./drop_menu.css">
+</head>
+<body>
+	<header>
+		<div class="header">
+			<span>头部</span>
+			<span>下拉菜单动画</span>
+			<img src="../public/svgs/more.svg" onClick="showNav()">
+		</div>
+	</header>
+	<!-- 下拉菜单 -->
+	<div class="slide-nav-menu">
+		<div class="close" onClick="hideNav()">
+			<img src="../public/svgs/close.svg">
+		</div>
+		<ul>
+			<li>首页</li>
+			<li>个人中心</li>
+			<li>关于我们</li>
+		</ul>
+	</div>
+	<script src="./drop_menu.js"></script>
+	<script type="text/javascript">
+		//初始化下拉菜单对象
+		var menu = new slideNav('slide-nav-menu',{
+			step: 5,
+			onAfterShow: afterShowCallback,
+			onAfterHide: afterHideCallback
+		});
+		function showNav() {
+			menu.show();
+		}
+		function hideNav() {
+			menu.hide();
+		}
+		function afterShowCallback() {
+			console.log('显示动画执行完的回调函数');
+		}
+		function afterHideCallback() {
+			console.log('隐藏动画执行完的回调函数');
+		}
+	</script>
+</body>
+</html>

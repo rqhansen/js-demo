@@ -1,5 +1,4 @@
-(function(window,document){
-
+;(function(window,document){
 	function slideNav(className,option) {
 		if(!className) {
 			throw new Error('className can not be empty');
