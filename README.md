@@ -22,22 +22,22 @@ JS + CSS3 + iconfont + Svg
 
 ### 下拉菜单
 
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/drop-menu.gif" width="235" height="458"/>
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/drop-menu.gif"/>
 
 ### 全屏滚动
 
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/full-page-scroll.gif" width="235" height="458"/>
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/full-page-scroll.gif"/>
 
 ### 下拉刷新
 
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/pull-down-refresh.gif" width="235" height="458"/>
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/pull-down-refresh.gif"/>
 
 ### 上拉加载
 
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/pull-up-refresh.gif" width="235" height="458"/>
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/pull-up-refresh.gif"/>
 
 ### Loading
 
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/circle-loading.gif" width="235" height="458"/><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="https://github.com/rqhansen/images/blob/master/js-demo/spot-loading.gif" width="235" height="458"/>
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/circle-loading.gif"/><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="https://github.com/rqhansen/images/blob/master/js-demo/spot-loading.gif"/>
 
 
