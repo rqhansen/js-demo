@@ -5,6 +5,7 @@
 ## 描述
 
 包含：
+轮播，
 下拉菜单，
 全屏滚动，
 下拉刷新，
@@ -19,6 +20,9 @@ JS + CSS3 + iconfont + Svg
 
 
 ##  效果
+
+### 轮播
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/hand-swipe.gif" width="350" height="660"/><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="https://github.com/rqhansen/images/blob/master/js-demo/auto-swipe.gif" width="350" height="660"/>
 
 ### 下拉菜单
 

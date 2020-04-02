@@ -9,7 +9,7 @@
     let target = '';
     let nextTarget = '';
     let isCompleting = false;
-    let autoPlayTimeDiff = 1000; 
+    let autoPlayTimeDiff = 3000; 
     let clientWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     
     let swipeItems = Array.from(getEleByClassName('rq-swipe-item'));
