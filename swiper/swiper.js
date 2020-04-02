@@ -2,18 +2,23 @@
     let startX = 0;
     let diffX = 0;
     let timer = '';
+    let startTimer = '';
+    let autoPlayTimer = '';
     let nextIndex = 0;
     let currIndex = 0;
     let target = '';
     let nextTarget = '';
-    let isComplete = false;
+    let isCompleting = false;
+    let clientWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     
-    let swipeItems = document.getElementsByClassName('rq-swipe-item');
-    let indicators = document.getElementsByClassName('rq-swipe-indicator');
+    let swipeItems = Array.from(getEleByClassName('rq-swipe-item'));
+    let indicators = getEleByClassName('rq-swipe-indicator');
+
+    target = swipeItems[0];
     swipeItems[0].classList.add('is-active');
     indicators[0].classList.add('is-active');
+
     let throttleMove = throttle(touchMove,50);
-    let clientWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
     for(let i = 0,len = swipeItems.length; i < len; i++) {
         var item = swipeItems[i];
@@ -23,13 +28,48 @@
         item.addEventListener('touchmove',(e) => {
             throttleMove(e);
         },false);
-        item.addEventListener('touchend',(e) => {
+        item.addEventListener('touchend',() => {
             touchEnd();
-        },false)
+        },false);
+
+        item.addEventListener('click',() => {
+            console.log('索引为：' + i);
+        });
+    }
+
+    // 一进来设置自动轮播
+    startTimer && clearTimeout(startTimer);
+    startTimer = setTimeout(autoPlay,3000);
+
+    // 自动轮播
+    function autoPlay() {
+        showOtherSwipeItem(currIndex);
+        let nextIndex = currIndex === swipeItems.length - 1 ? 0 : currIndex + 1;
+        let nextTarget = swipeItems[nextIndex];
+        let offSetDis = 0;
+        autoPlayTimer && clearInterval(autoPlayTimer);
+        autoPlayTimer = setInterval(() => {
+            offSetDis = Math.max(offSetDis-=20, -clientWidth);
+            setTransform(target,offSetDis);
+            setTransform(nextTarget,clientWidth + offSetDis);
+            if(offSetDis <= -clientWidth) {
+                clearInterval(autoPlayTimer);
+                removeTransProperty();
+                target.classList.remove('is-active');
+                nextTarget.classList.add('is-active');
+                indicators[nextIndex].classList.add('is-active');
+                indicators[currIndex].classList.remove('is-active');
+                currIndex = nextIndex;
+                target = nextTarget;
+                startTimer = setTimeout(autoPlay,3000);
+            }
+        },15);
     }
 
     function touchStart(e,index) {
-        if(isComplete) return;
+        if(isCompleting) return;
+        startTimer && clearTimeout(startTimer);
+        autoPlayTimer && clearInterval(autoPlayTimer);
         target = swipeItems[index];
         currIndex = index;
         nextTarget = '';
@@ -38,68 +78,85 @@
     }
 
     function touchMove(arguments) {
-        if(isComplete) return;
+        if(isCompleting) return;
         let endX = getClientX(arguments[0]);
         diffX =  parseFloat(endX - startX);
-        if(!nextTarget) {
-            if(diffX > 0) {
-                nextIndex = currIndex === 0 ? swipeItems.length - 1 : currIndex - 1;
-            } else {
-                nextIndex = currIndex === swipeItems.length - 1 ? 0 : currIndex + 1;
-            }
-            nextTarget = swipeItems[nextIndex];
-        }
-        diffX = diffX < 0 ? Math.max(diffX,-clientWidth) : Math.min(diffX,clientWidth);
-        target.style.transform = `translate3d(${diffX}px,0,0)`;
-        if(diffX < 0) {
-            nextTarget.style.transform = `translate3d(${clientWidth + diffX}px,0,0)`;
+        let offSetDis = 0;
+        if(diffX > 0) {
+            nextIndex = currIndex === 0 ? swipeItems.length - 1 : currIndex - 1;
+            diffX = Math.min(diffX,clientWidth);
+            offSetDis = diffX - clientWidth;
         } else {
-            nextTarget.style.transform = `translate3d(${diffX - clientWidth}px,0,0)`;
+            nextIndex = currIndex === swipeItems.length - 1 ? 0 : currIndex + 1;
+            diffX = Math.max(diffX,-clientWidth);
+            offSetDis = clientWidth + diffX;
         }
+        nextTarget = swipeItems[nextIndex];
+        setTransform(target,diffX);
+        setTransform(nextTarget,offSetDis);
     }
 
     function touchEnd() {
-        if(isComplete) return;
-        isComplete = true;
-        target.style.transition = 'transform 300ms ease-in-out';
-        nextTarget.style.transition = 'transform 300ms ease-in-out';
+        if(isCompleting) return;
+        if(diffX === 0) {
+            showOtherSwipeItem(currIndex);
+            startTimer = setTimeout(autoPlay,3000);
+            return; 
+        }
+        isCompleting = true;
         timer && clearTimeout(timer);
-        if(Math.abs(diffX) <= clientWidth * 0.25) { // 不切换轮播图
-            target.style.transform = 'translate3d(0,0,0)';
+        startTimer && clearTimeout(startTimer);
+        autoPlayTimer && clearInterval(autoPlayTimer);
+        setTransition(target);
+        setTransition(nextTarget);
+        if(Math.abs(diffX) <= clientWidth * 0.25) { // 不轮播
             let offSetDis = diffX < 0 ? clientWidth : -clientWidth;
-            nextTarget.style.transform = `translate3d(${offSetDis}px,0,0)`;
-            // if(diffX < 0) {
-            //     nextTarget.style.transform = `translate3d(${clientWidth}px,0,0)`;
-            // } else {
-            //     nextTarget.style.transform = `translate3d(${-clientWidth}px,0,0)`;
-            // }
+            setTransform(target,0);
+            setTransform(nextTarget,offSetDis);
             timer = setTimeout(() => {
-                removeTransProperty(target);
-                isComplete = false;
+                removeTransProperty();
+                diffX = 0;
+                showOtherSwipeItem(currIndex);
+                isCompleting = false;
+                startTimer = setTimeout(autoPlay,3000);
             },300)
-        } else {
+        } else { // 轮播
             let offSetX = diffX < 0 ? -clientWidth : clientWidth;
-            target.style.transform = `translate3d(${offSetX}px,0,0)`;
-            nextTarget.style.transform = 'translate3d(0,0,0)';
+            setTransform(target,offSetX);
+            setTransform(nextTarget,0);
             timer = setTimeout(() => {
-                removeTransProperty(target);
+                removeTransProperty();
                 target.classList.remove('is-active');
                 nextTarget.classList.add('is-active');
                 indicators[nextIndex].classList.add('is-active');
                 indicators[currIndex].classList.remove('is-active');
-                isComplete = false;
+                diffX = 0;
+                // 设置当前的索引
+                currIndex = nextIndex;
+                target = nextTarget;
+                showOtherSwipeItem(currIndex);
+                isCompleting = false;
+                startTimer = setTimeout(autoPlay,3000);
             },300) 
         }
     }
 
-    function removeTransProperty(target) {
-        target.style = undefined;
-        nextTarget.style = undefined;
+    function removeTransProperty() {
+        swipeItems.forEach(el => {
+            el.style = undefined;
+        });
+    }
+
+    function setTransition(ele) {
+        ele.style.transition = `transform 300ms ease-in-out`;
+    }
+
+    function setTransform(ele,offSetX) {
+        ele.style.transform = `translate3d(${offSetX}px,0,0)`;
     }
 
     function showOtherSwipeItem(index) {
-        let swipeItemsArr = Array.from(swipeItems);
-        swipeItemsArr.forEach((el,idx) => {
+        swipeItems.forEach((el,idx) => {
             idx !== index && (el.style.display = 'block');
         });
     }
@@ -107,4 +164,8 @@
     function getClientX(e) {
         return e.changedTouches[0].clientX;
     }
+
+    function getEleByClassName(className) {
+        return document.getElementsByClassName(className);
+    };
 })(window,document);
