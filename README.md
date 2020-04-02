@@ -22,7 +22,7 @@ JS + CSS3 + iconfont + Svg
 ##  效果
 
 ### 轮播
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/hand-swipe.gif" width="350" height="660"/><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="https://github.com/rqhansen/images/blob/master/js-demo/auto-swipe.gif" width="350" height="660"/>
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/hand_swipe.gif" width="350" height="660"/><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="https://github.com/rqhansen/images/blob/master/js-demo/auto_swipe.gif" width="350" height="660"/>
 
 ### 下拉菜单
 
