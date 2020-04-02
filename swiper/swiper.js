@@ -9,6 +9,7 @@
     let target = '';
     let nextTarget = '';
     let isCompleting = false;
+    let autoPlayTimeDiff = 1000; 
     let clientWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     
     let swipeItems = Array.from(getEleByClassName('rq-swipe-item'));
@@ -39,7 +40,7 @@
 
     // 一进来设置自动轮播
     startTimer && clearTimeout(startTimer);
-    startTimer = setTimeout(autoPlay,3000);
+    startTimer = setTimeout(autoPlay,autoPlayTimeDiff);
 
     // 自动轮播
     function autoPlay() {
@@ -61,7 +62,7 @@
                 indicators[currIndex].classList.remove('is-active');
                 currIndex = nextIndex;
                 target = nextTarget;
-                startTimer = setTimeout(autoPlay,3000);
+                startTimer = setTimeout(autoPlay,autoPlayTimeDiff);
             }
         },15);
     }
@@ -100,7 +101,7 @@
         if(isCompleting) return;
         if(diffX === 0) {
             showOtherSwipeItem(currIndex);
-            startTimer = setTimeout(autoPlay,3000);
+            startTimer = setTimeout(autoPlay,autoPlayTimeDiff);
             return; 
         }
         isCompleting = true;
@@ -118,7 +119,7 @@
                 diffX = 0;
                 showOtherSwipeItem(currIndex);
                 isCompleting = false;
-                startTimer = setTimeout(autoPlay,3000);
+                startTimer = setTimeout(autoPlay,autoPlayTimeDiff);
             },300)
         } else { // 轮播
             let offSetX = diffX < 0 ? -clientWidth : clientWidth;
@@ -136,7 +137,7 @@
                 target = nextTarget;
                 showOtherSwipeItem(currIndex);
                 isCompleting = false;
-                startTimer = setTimeout(autoPlay,3000);
+                startTimer = setTimeout(autoPlay,autoPlayTimeDiff);
             },300) 
         }
     }
