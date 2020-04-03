@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>输入框</title>
+    <link rel="stylesheet" href="input.css">
+    
+</head>
+<body>
+    <!-- 整数输入框 -->
+    <div class="rq-input-wrap">
+        <label for="integerIpt">整数：</label>
+        <input id="integerIpt" type="tel" placeholder="请输入整数" maxlength=15>
+        <div class="tip">如8，80，800</div>
+    </div>
+    <!-- 数字输入框 -->
+    <div class="rq-input-wrap">
+        <label for="numInput">数字：</label>
+        <input id="numInput" type="tel" placeholder="请输入数字(支持两位小数)" maxlength=15>
+        <div class="tip">如8，88.2，8.20，8.23</div>
+    </div>
+    <script src="input.js"></script>
+</body>
+</html>

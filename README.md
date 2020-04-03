@@ -10,6 +10,7 @@
 全屏滚动，
 下拉刷新，
 上拉加载，
+数字输入框，
 Loading
 ...
 
@@ -39,6 +40,10 @@ JS + CSS3 + iconfont + Svg
 ### 上拉加载
 
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/pull-up-refresh.gif" width="350" height="660"/>
+
+### 数字输入框
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/num_input.jpg" width="350" height="660"/>
+
 
 ### Loading
 
