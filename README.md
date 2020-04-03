@@ -11,13 +11,13 @@
 下拉刷新，
 上拉加载，
 数字输入框，
-Loading
+Loading等
 ...
 
 
 ## 技术栈 
 
-JS + CSS3 + iconfont + Svg
+JS + CSS3 + iconfont等
 
 
 ##  效果
