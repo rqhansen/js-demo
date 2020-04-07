@@ -12,6 +12,7 @@
 上拉加载、
 数字输入框、
 自定义radio、
+自定义checkbox、
 Loading等
 
 
@@ -51,6 +52,9 @@ JS + CSS3 + iconfont等
 
 ### 自定义radio
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/custom-radio.gif" width="350" height="660"/>
+
+### 自定义checkbox
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/custom-checkbox.gif" width="350" height="660"/>
 
 
 
