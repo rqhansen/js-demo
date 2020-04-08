@@ -13,6 +13,7 @@
 数字输入框、
 自定义radio、
 自定义checkbox、
+自定义button、
 Loading等
 
 
@@ -55,6 +56,9 @@ JS + CSS3 + iconfont等
 
 ### 自定义checkbox
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/custom-checkbox.gif" width="350" height="660"/>
+
+### 自定义button
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/custom-button.png" width="350" height="660"/>
 
 
 
