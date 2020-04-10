@@ -1,11 +1,7 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    user-select: none;
-    -webkit-user-select: none;
-}
 
+button {
+    -webkit-appearance: button;
+}
 .rq-btn-wrap {
     position: fixed;
     left: 50%;

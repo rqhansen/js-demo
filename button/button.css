@@ -1,18 +1,4 @@
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-html,body {
-    height: 100%;
-    overflow: hidden;
-}
-button {
-    outline: none;
-    user-select: none;
-    -webkit-appearance: none;
-}
 .rq-button-wrapper {
     padding: 20px;
 }

@@ -1,14 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html,body {
-    background-color: #fff;
-    height: 100%;
-    overflow: hidden;
-}
 
 .rq-radio-title {
     padding: 10px 0;
