@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f7f8fa;
+}
+
+.rq-cell-group {
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+.rq-cell {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 10px 16px;
+    color: #323232;
+    line-height: 24px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.rq-cell-center {
+    align-items: center;
+}
+
+.rq-cell:not(:last-child):after {
+    position: absolute;
+    content: '';
+    right: 16px;
+    bottom: 0;
+    left: 16px;
+    pointer-events: none;
+    border-bottom: 1px solid #ebedf0;
+    transform: scaleY(.5);
+    -webkit-transform: scaleY(.5);
+}
+
+.rq-cell-title,.rq-cell-value {
+     flex: 1;
+     -webkit-flex: 1;
+     -webkit-box-flex: 1;
+}
+
+.rq-cell-value {
+    position: relative;
+    color: #969799;
+    text-align: right;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.rq-cell-label {
+    margin-top: 3px;
+    color: #969799;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.rq-icon {
+    display: inline-block;
+
+}
+
+.rq-icon-left-icon,.rq-icon-right-icon {
+    min-width: 1em;
+    height: 24px;
+    line-height: 26px;
+    font-size: 20px;
+
+}
+
+.rq-icon-left-icon {
+    margin-right: 3px;
+}
+
+.rq-icon-right-icon {
+    margin-left: 3px;
+    color: #969799;
+}
