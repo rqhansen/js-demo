@@ -104,3 +104,19 @@ button {
     font-size: 12px;
     line-height: 30px;
 }
+
+.rq-icon {
+    display: inline-block;
+}
+
+.rq-button-icon {
+    font-size: 1.3em;
+    line-height: inherit;
+    vertical-align: top;
+}
+
+.rq-button-text {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3px;
+}
