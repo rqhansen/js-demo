@@ -1,10 +1,13 @@
-
 .rq-button-row {
     margin-bottom: 12px;
 } 
 
 .rq-demo-button .rq-demo-block-title{
     padding-left: 0;
+}
+
+.rq-demo-button .rq-demo-block {
+    padding: 0 16px;
 }
 
 .rq-button {
@@ -136,10 +139,6 @@
     border-radius: 999px;
 }
 
-.rq-icon {
-    display: inline-block;
-}
-
 .rq-button-icon {
     font-size: 1.3em;
     line-height: inherit;
@@ -157,7 +156,6 @@
     vertical-align: top;
     margin-left: 3px;
 }
-
 
 .rq-button-loading {
     display: inline-block;

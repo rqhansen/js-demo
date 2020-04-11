@@ -5,51 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <title>cell单元格</title>
     <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/common.css">
     <link rel="stylesheet" href="../public/iconfont/iconfont.css">
     <link rel="stylesheet" href="cell.css">
 </head>
 <body>
-    <div class="rq-cell-group">
-        <div class="rq-cell">
-            <div class="rq-cell-title">
-                <span>单元格</span>
-            </div>
-            <div class="rq-cell-value">
-                <span>内容</span>
+    <div class="rq-demo-nav-title">
+        <span>Cell</span>
+    </div>
+    <div class="rq-demo-section">
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title">
+                基本用法
+            </h2>
+            <div class="rq-cell-group">
+                <div class="rq-cell">
+                    <div class="rq-cell-title">
+                        <span>单元格</span>
+                    </div>
+                    <div class="rq-cell-value">
+                        <span>内容</span>
+                    </div>
+                </div>
+                <div class="rq-cell">
+                    <div class="rq-cell-title">
+                        <span>单元格</span>
+                        <div class="rq-cell-label">描述信息</div>
+                    </div>
+                    <div class="rq-cell-value">
+                        <span>内容</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="rq-cell">
-            <div class="rq-cell-title">
-                <span>单元格</span>
-                <div class="rq-cell-label">描述信息</div>
-            </div>
-            <div class="rq-cell-value">
-                <span>内容</span>
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title">单元格大小</h2>
+            <div class="rq-cell-group">
+                <div class="rq-cell rq-cell-large">
+                    <div class="rq-cell-title">
+                        <span>单元格</span>
+                    </div>
+                    <div class="rq-cell-value">
+                        <span>内容</span>
+                    </div>
+                </div>
+                <div class="rq-cell rq-cell-large">
+                    <div class="rq-cell-title">
+                        <span>单元格</span>
+                        <div class="rq-cell-label">描述信息</div>
+                    </div>
+                    <div class="rq-cell-value">内容</div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="rq-cell-group">
-        <div class="rq-cell rq-cell-center">
-            <div class="rq-cell-title">
-                <span>单元格</span>
-                <div class="rq-cell-label">描述信息</div>
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title">展示图标</h2>
+            <div class="rq-cell-group">
+                <div class="rq-cell">
+                    <i class="rq-icon rq-icon-left-icon iconfont iconsearch"></i>
+                    <div class="rq-cell-title">单元格</div>
+                    <div class="rq-cell-value">内容</div>
+                </div> 
             </div>
-            <div class="rq-cell-value">内容</div>
         </div>
-    </div>
-    <div class="rq-cell-group">
-        <div class="rq-cell">
-            <i class="rq-icon rq-icon-left-icon iconfont iconsearch"></i>
-            <div class="rq-cell-title">单元格</div>
-            <div class="rq-cell-value">内容</div>
-        </div> 
-    </div>
-    <div class="rq-cell-group">
-        <div class="rq-cell">
-            <div class="rq-cell-title">单元格</div>
-            <div class="rq-cell-value">内容</div>
-            <i class="rq-icon rq-icon-right-icon iconfont iconarrow-right"></i>
-        </div> 
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title">只展示内容</h2>
+            <div class="rq-cell-group">
+                <div class="rq-cell">
+                    <div class="rq-cell-value rq-cell-value-alone">内容</div>
+                </div>
+            </div>
+        </div>
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title">展示箭头</h2>
+            <div class="rq-cell-group">
+                <div role="button" class="rq-cell rq-cell-clickable">
+                    <div class="rq-cell-title">单元格</div>
+                    <!-- <div class="rq-cell-value">内容</div> -->
+                    <i class="rq-icon rq-icon-right-icon iconfont iconarrow-right"></i>
+                </div>
+                <div role="button" class="rq-cell rq-cell-clickable">
+                    <div class="rq-cell-title">单元格</div>
+                    <div class="rq-cell-value">内容</div>
+                    <i class="rq-icon rq-icon-right-icon iconfont iconarrow-right"></i>
+                </div>
+                <div role="button" class="rq-cell rq-cell-clickable">
+                    <div class="rq-cell-title">单元格</div>
+                    <div class="rq-cell-value">内容</div>
+                    <i class="rq-icon rq-icon-right-icon iconfont iconarrow-right rq-icon-right-icon-down"></i>
+                </div>    
+            </div>
+        </div>
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title">垂直居中</h2>
+            <div class="rq-cell-group">
+                <div class="rq-cell rq-cell-center">
+                    <div class="rq-cell-title">
+                        <span>单元格</span>
+                        <div class="rq-cell-label">描述信息</div>
+                    </div>
+                    <div class="rq-cell-value">内容</div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

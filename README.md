@@ -62,7 +62,7 @@ JS + CSS3 + iconfont等
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/custom-button.gif" width="350" height="660"/>
 
 ### cell单元格
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/cell.png" width="350" height="660"/>
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/cell.gif" width="350" height="660"/>
 
 
 

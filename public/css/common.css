@@ -3,22 +3,28 @@
     text-align: center;
     line-height: 44px;
     font-size: 16px;
+    background-color: #fff;
 }
 /* 标题结束 */
 
+/* 包裹层 */
 .rq-demo-section {
     min-height: calc(100vh - 44px);
     padding-bottom: 20px;
 }
+/* 包裹层结束 */
 
+/* 区域包裹层 */
 .rq-demo-block {
-    padding: 0 16px;
+    /* padding: 0 16px; */
 }
 
 .rq-demo-block:first-of-type .rq-demo-block-title {
     padding-top: 20px;
 }
+/* 区域包裹层结束 */
 
+/* 区域包裹层标题 */
 .rq-demo-block-title {
     color: rgba(69, 90, 100, .6);
     padding: 32px 16px 16px;
@@ -26,7 +32,39 @@
     font-size: 14px;
     line-height: 16px;
 }
+/* 区域包裹层标题结束 */
 
+/* icon */
+
+.rq-icon {
+    display: inline-block;
+
+}
+
+.rq-icon-left-icon,
+.rq-icon-right-icon {
+    min-width: 1em;
+    height: 24px;
+    line-height: 26px;
+    font-size: 20px;
+}
+
+.rq-icon-left-icon {
+    margin-right: 3px;
+}
+
+.rq-icon-right-icon {
+    margin-left: 3px;
+    color: #969799;
+}
+
+.rq-icon-right-icon.rq-icon-right-icon-down {
+    transform: rotate(90deg);
+}
+
+/* icon结束 */
+
+/* 细边框(四边) */
 .rq-hairline:after {
     position: absolute;
     content: '';
@@ -42,7 +80,9 @@
 .rq-hairline-surround:after {
     border-width: 1px;
 }
+/* 细边框结束 */
 
+/* 加载中 */
 .rq-loading {
     font-size: 0;
     pointer-events: none;
@@ -59,6 +99,19 @@
     animation: rq-rotate .8s linear infinite;
 }
 
+/* 加载中的圆边框 */
+.rq-loading-circle {
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    border-top-color: transparent;
+}
+/* 加载中的圆边框结束 */
+
+/* 花瓣形loading */
 .rq-loading-spinner-spinner {
     animation-timing-function: steps(12);
     -webkit-animation-timing-function: steps(12); /* 一个动画周期，动画分12次完成，每次旋转30度*/
@@ -142,15 +195,9 @@
     opacity: 0.3125;
 }
 
-.rq-loading-circle {
-    display: inline-block;
-    vertical-align: top;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    border-top-color: transparent;
-}
+/* 花瓣型loading结束 */
+
+/* 加载中结束 */
 
 /* 旋转动画 */
 
