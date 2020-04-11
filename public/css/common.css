@@ -1,0 +1,177 @@
+/* 标题 */
+.rq-demo-nav-title {
+    text-align: center;
+    line-height: 44px;
+    font-size: 16px;
+}
+/* 标题结束 */
+
+.rq-demo-section {
+    min-height: calc(100vh - 44px);
+    padding-bottom: 20px;
+}
+
+.rq-demo-block {
+    padding: 0 16px;
+}
+
+.rq-demo-block:first-of-type .rq-demo-block-title {
+    padding-top: 20px;
+}
+
+.rq-demo-block-title {
+    color: rgba(69, 90, 100, .6);
+    padding: 32px 16px 16px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.rq-hairline:after {
+    position: absolute;
+    content: '';
+    pointer-events: none;
+    top:-50%;
+    right: -50%;
+    left: -51%;
+    bottom: -50%;
+    transform: scale(.5);
+    border: 0 solid #ebedf0;
+}
+
+.rq-hairline-surround:after {
+    border-width: 1px;
+}
+
+.rq-loading {
+    font-size: 0;
+    pointer-events: none;
+}
+
+.rq-loading-spinner {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    max-width: 100%;
+    max-height: 100%;
+    animation: rq-rotate .8s linear infinite;
+}
+
+.rq-loading-spinner-spinner {
+    animation-timing-function: steps(12);
+    -webkit-animation-timing-function: steps(12); /* 一个动画周期，动画分12次完成，每次旋转30度*/
+}
+
+.rq-loading-spinner-spinner i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.rq-loading-spinner-spinner i:before {
+    display: block;
+    width: 2px;
+    height: 25%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 40%;
+    content: '';
+}
+
+.rq-loading-spinner-spinner i:nth-of-type(1) {
+    transform: rotate(30deg);
+    opacity: 1;
+}
+
+.rq-loading-spinner-spinner i:nth-of-type(2) {
+    transform: rotate(60deg);
+    opacity: 0.9375;
+}
+
+.rq-loading-spinner-spinner i:nth-of-type(3) {
+    transform: rotate(90deg);
+    opacity: 0.875;
+}
+
+.rq-loading-spinner-spinner i:nth-of-type(4) {
+    transform: rotate(120deg);
+    opacity: 0.8125;
+}
+
+.rq-loading-spinner-spinner i:nth-of-type(5) {
+    transform: rotate(150deg);
+    opacity: 0.75;
+}
+
+.rq-loading-spinner-spinner i:nth-of-type(6) {
+    transform: rotate(180deg);
+    opacity: 0.6875;
+}
+
+.rq-loading-spinner-spinner i:nth-of-type(7) {
+    transform: rotate(210deg);
+    opacity: 0.625;
+}
+
+.rq-loading-spinner-spinner i:nth-of-type(8) {
+    transform: rotate(240deg);
+    opacity: 0.5625;
+}
+
+.rq-loading-spinner-spinner i:nth-of-type(9) {
+    transform: rotate(270deg);
+    opacity: 0.5;
+}
+
+.rq-loading-spinner-spinner i:nth-of-type(10) {
+    transform: rotate(300deg);
+    opacity: 0.4375;
+}
+
+.rq-loading-spinner-spinner i:nth-of-type(11) {
+    transform: rotate(330deg);
+    opacity: 0.375;
+}
+
+.rq-loading-spinner-spinner i:nth-of-type(12) {
+    transform: rotate(360deg);
+    opacity: 0.3125;
+}
+
+.rq-loading-circle {
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+}
+
+/* 旋转动画 */
+
+@keyframes rq-rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rq-rotate{
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 旋转动画 */

@@ -1,17 +1,17 @@
 
-.rq-button-wrapper {
-    padding: 20px;
-}
-
 .rq-button-row {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+} 
+
+.rq-demo-button .rq-demo-block-title{
+    padding-left: 0;
 }
 
 .rq-button {
     position: relative;
     display: inline-block;
     height: 44px;
-    line-height: 44px;
+    line-height: 42px;
     text-align: center;
     font-size: 16px;
     border-radius: 2px;
@@ -23,7 +23,8 @@
     font-size: 14px;
 }
 
-.rq-button-small,.rq-button-normal:not(:last-child) {
+.rq-button-small,
+.rq-button-normal:not(:last-child) {
     margin-right: 15px;
 }
 
@@ -59,13 +60,13 @@
     border: 1px solid #07c160;
 }
 
-.rq-button-info {
+.rq-button-danger {
     color: #fff;
     background-color: #ee0a24;
     border: 1px solid #ee0a24;
 }
 
-.rq-button-danger {
+.rq-button-info {
     color: #fff;
     background-color: #1989fa;
     border: 1px solid #1989fa;
@@ -75,6 +76,34 @@
     color: #fff;
     background-color: #ff976a;
     border: 1px solid #ff976a;
+}
+
+.rq-button-plain {
+    background-color: #fff;
+}
+
+.rq-button-primary.rq-button-plain {
+    color: #07c160;
+}
+.rq-button-info.rq-button-plain {
+    color: #1989fa;
+}
+
+.rq-button-danger.rq-button-plain {
+    color: #ee0a24;;
+}
+
+.rq-button-warning.rq-button-plain {
+    color: #ff976a;
+}
+
+.rq-button-hairline {
+    border-width: 0;
+}
+
+.rq-button-hairline:after {
+    border-color: inherit;
+    border-radius: 4px;
 }
 
 .rq-button-large {
@@ -91,6 +120,22 @@
     line-height: 30px;
 }
 
+.rq-button-mini {
+    min-width: 50px;
+    height: 22px;
+    font-size: 10px;
+    line-height: 22px;
+}
+
+.rq-button-disabled {
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+.rq-button-round {
+    border-radius: 999px;
+}
+
 .rq-icon {
     display: inline-block;
 }
@@ -105,4 +150,17 @@
     display: inline-block;
     vertical-align: top;
     margin-left: 3px;
+}
+
+.rq-button-loading-text {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3px;
+}
+
+
+.rq-button-loading {
+    display: inline-block;
+    color: inherit;
+    vertical-align: top;
 }
