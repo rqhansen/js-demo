@@ -1,0 +1,54 @@
+.center {
+    margin: 0 auto;
+}
+
+.rq-follow-move-title {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.nav-wrapper {
+    user-select: none;
+}
+
+.list {
+    width: 900px;
+    margin: 100px auto 0;
+}
+
+ul {
+    font-size: 0;
+    text-align: center;
+}
+
+li {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+li:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid #ccc;
+    transition: all .2s ease-in-out;
+}
+
+li:hover:before {
+    left: 0;
+    width: 100%;
+}
+
+li:hover ~li:before {
+    left: 0;
+}
