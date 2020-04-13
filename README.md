@@ -53,7 +53,7 @@ JS + CSS3 + iconfont等
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/circle-loading.gif" width="350" height="660"/><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="https://github.com/rqhansen/images/blob/master/js-demo/spot-loading.gif" width="350" height="660"/>
 
 ### 自定义radio
-<img src="https://github.com/rqhansen/images/blob/master/js-demo/custom-radio.gif" width="350" height="660"/>
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/custom-radio.png" width="350" height="660"/>
 
 ### 自定义checkbox
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/custom-checkbox.gif" width="350" height="660"/>

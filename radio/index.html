@@ -5,44 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=2.0,minimum-scale=1.0,user-scalable=no">
     <title>自定义单选框</title>
     <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/common.css">
     <link rel="stylesheet" href="radio.css">
 </head>
 <body>
-    <div class="rq-radio-title">
+    <div class="rq-demo-nav-title">
         <span>自定义radio</span>
     </div>
-    <div class="rq-radiolist-wrapper">
-        <div class='rq-radio-wrapper'>
-            <label class='rq-radio-label'>
-                <span class="rq-radio">
-                    <input type="radio" class="rq-radio-input" name='course' value="1">
-                    <span class="rq-radio-core"></span>
-                </span>
-                <span class="rq-label-text">选项1</span>
-            </label>
+    <div class="rq-demo-section">
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title rq-radiolist-title">基础用法</h2>
+            <div role="radiogroup" class="rq-radio-group">
+                <label class="rq-radio rq-radio-horizontal"> 
+                    <span>
+                        <input  checked type="radio" class="rq-radio-input" name='course' value="1">
+                        <span class="rq-radio-core"></span>
+                    </span>
+                    <span class="rq-label-text">选项1</span>
+                </label>
+                <label class="rq-radio"> 
+                    <span>
+                        <input type="radio" class="rq-radio-input" name='course' value="2">
+                        <span class="rq-radio-core"></span>
+                    </span>
+                    <span class="rq-label-text">选项2</span>
+                </label>
+            </div>
         </div>
-        <div class='rq-radio-wrapper'>
-            <label class='rq-radio-label'>
-                <span class="rq-radio">
-                    <input type="radio" class="rq-radio-input" name="course" value="2">
-                    <span class="rq-radio-core"></span>
-                </span>
-                <span class="rq-label-text">选项2</span>
-            </label>
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title rq-radiolist-title">水平排列</h2>
+            <div role="radiogroup" class="rq-radio-group rq-radio-group-horizontal">
+                <label class="rq-radio rq-radio-horizontal"> 
+                    <span>
+                        <input checked type="radio" class="rq-radio-input" name='course1' value="1">
+                        <span class="rq-radio-core"></span>
+                    </span>
+                    <span class="rq-label-text">选项1</span>
+                </label>
+                <label class="rq-radio"> 
+                    <span>
+                        <input type="radio" class="rq-radio-input" name='course1' value="2">
+                        <span class="rq-radio-core"></span>
+                    </span>
+                    <span class="rq-label-text">选项2</span>
+                </label>
+            </div>
         </div>
-        <div class='rq-radio-wrapper'>
-            <label class='rq-radio-label'>
-                <span class="rq-radio">
-                    <input type="radio" class="rq-radio-input" name="course" value="3">
-                    <span class="rq-radio-core"></span>
-                </span>
-                <span class="rq-label-text">选项3</span>
-            </label>
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title rq-radiolist-title">禁用状态</h2>
+            <div role="radiogroup" class="rq-radio-group">
+                <label class="rq-radio">
+                    <span>
+                        <input disabled type="radio" class="rq-radio-input" name='course2' value="1">
+                        <span class="rq-radio-core"></span>
+                    </span>
+                    <span class="rq-label-text">选项1</span>
+                </label>
+                <label class="rq-radio">
+                    <span>
+                        <input  disabled checked type="radio" class="rq-radio-input" name='course2' value="1">
+                        <span class="rq-radio-core"></span>
+                    </span>
+                    <span class="rq-label-text">选项1</span>
+                </label>
+            </div>
+        </div>
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title rq-radiolist-title">自定义形状</h2>
+            <div role="radiogroup" class="rq-radio-group">
+                <label class="rq-radio">
+                    <span class="rq-radio-icon-square">
+                        <input checked type="radio" class="rq-radio-input" name="course3" value="1">
+                        <span class="rq-radio-core"></span>
+                    </span>
+                    <span class="rq-label-text">选项1</span>
+                </label>
+                <label class="rq-radio">
+                    <span class="rq-radio-icon-square">
+                        <input type="radio" class="rq-radio-input" name="course3" value="2">
+                        <span class="rq-radio-core"></span>
+                    </span>
+                    <span class="rq-label-text">选项2</span>
+                </label>
+            </div>
+        </div>
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title rq-radiolist-title">自定义颜色</h2>
+            <div role="radiogroup" class="rq-radio-group">
+                <label class="rq-radio">
+                    <span>
+                        <input type="radio" class="rq-radio-input" name="course4" value="1">
+                        <span class="rq-radio-core rq-radio-core-success"></span>
+                    </span>
+                    <span class="rq-label-text">选项1</span>
+                </label>
+                <label class="rq-radio">
+                    <span>
+                        <input checked type="radio" class="rq-radio-input" name="course4" value="1">
+                        <span class="rq-radio-core rq-radio-core-success"></span>
+                    </span>
+                    <span class="rq-label-text">选项1</span>
+                </label>
+            </div>
+        </div>
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title rq-radiolist-title">右对齐</h2>
+            <div role="radiogroup" class="rq-radio-group">
+                <label class="rq-radio">
+                    <span class="rq-icon-right">
+                        <input type="radio" class="rq-radio-input" name="course5" value="1">
+                        <span class="rq-radio-core"></span>
+                    </span>
+                    <span class="rq-label-text">选项1</span>
+                </label>
+                <label class="rq-radio">
+                    <span class="rq-icon-right">
+                        <input type="radio" checked class="rq-radio-input" name="course5" value="1">
+                        <span class="rq-radio-core"></span>
+                    </span>
+                    <span class="rq-label-text">选项1</span>
+                </label>
+            </div>
         </div>
     </div>
     <div class="rq-chocie-value">
         <span id="radioVal"></span>
     </div>
-    <script src="radio.js"></script>
 </body>
 </html>
