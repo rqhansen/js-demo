@@ -64,5 +64,8 @@ JS + CSS3 + iconfont等
 ### cell单元格
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/cell.gif" width="350" height="660"/>
 
+### css导航栏下划线跟随效果
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/nav-follow-underline.gif" width="350" height="660"/>
+
 
 
