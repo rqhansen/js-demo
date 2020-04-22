@@ -236,6 +236,29 @@
     float: left;
 }
 
+.rq-col-12 {
+    width: 50%;
+}
+
+.rq-col-offset-12 {
+    margin-left: 50%;
+}
+.rq-col-10 {
+    width: 41.66666667%;
+}
+
 .rq-col-8 {
     width: 33.33333333%;
+}
+
+.rq-col-6 {
+    width: 25%;
+}
+
+.rq-col-4 {
+    width: 16.66666667%
+}
+
+.rq-col-offset-4 {
+    margin-left: 16.66666667%;
 }

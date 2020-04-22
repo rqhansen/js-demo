@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>layout</title>
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/common.css">
+    <link rel="stylesheet" href="./layout.css">
+</head>
+<body>
+    <div class="rq-demo-nav-title">Layout布局</div>
+    <div class="rq-demo-section demo-col">
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title">基础用法</h2>
+            <div class="rq-row">
+                <div class="rq-col rq-col-8">span:8</div>
+                <div class="rq-col rq-col-8">span:8</div>
+                <div class="rq-col rq-col-8">span:8</div>
+            </div>
+            <div class="rq-row">
+                <div class="rq-col rq-col-4">span:4</div>
+                <div class="rq-col rq-col-10 rq-col-offset-4">span:4</div>
+            </div>
+            <div class="rq-row">
+                <div class="rq-col rq-col-12 rq-col-offset-12">offset:12,&nbsp;&nbsp;span:12</div>
+            </div>
+        </div>
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title">列之间增加间距</h2>
+            <div class="rq-row">
+                <div class="rq-col rq-col-8" style="padding-left: 10px;padding-right: 10px;">span:8</div>
+                <div class="rq-col rq-col-8" style="padding-left: 10px;padding-right: 10px;">span:8</div>
+                <div class="rq-col rq-col-8" style="padding-left: 10px;padding-right: 10px;">span:8</div>                
+            </div>
+        </div>
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title">Flex布局</h2>
+            <div class="rq-row rq-row-flex">
+                <div class="rq-col rq-col-6">span:6</div>
+                <div class="rq-col rq-col-6">span:6</div>
+                <div class="rq-col rq-col-6">span:6</div>
+            </div>
+            <div class="rq-row rq-row-flex rq-row-justify-center">
+                <div class="rq-col rq-col-6">span:6</div>
+                <div class="rq-col rq-col-6">span:6</div>
+                <div class="rq-col rq-col-6">span:6</div>
+            </div>
+            <div class="rq-row rq-row-flex rq-row-justify-end">
+                <div class="rq-col rq-col-6">span:6</div>
+                <div class="rq-col rq-col-6">span:6</div>
+                <div class="rq-col rq-col-6">span:6</div>
+            </div>
+            <div class="rq-row rq-row-flex rq-row-justify-space-between">
+                <div class="rq-col rq-col-6">span:6</div>
+                <div class="rq-col rq-col-6">span:6</div>
+                <div class="rq-col rq-col-6">span:6</div>
+            </div>
+            <div class="rq-row rq-row-flex rq-row-justify-space-around">
+                <div class="rq-col rq-col-6">span:6</div>
+                <div class="rq-col rq-col-6">span:6</div>
+                <div class="rq-col rq-col-6">span:6</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

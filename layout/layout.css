@@ -1,0 +1,40 @@
+.demo-col .rq-col:nth-of-type(odd){
+    background-color: #39a9ed;
+}
+
+.demo-col .rq-col:nth-of-type(even) {
+    background-color: #66c6f2;
+}   
+
+.demo-col .rq-col {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    background-clip: content-box;
+}
+
+.rq-row-flex {
+    display: flex;
+}
+
+.rq-row.rq-row-flex:after {
+    display: none;
+}
+
+.rq-row-justify-center {
+    justify-content: center;
+}
+
+.rq-row-justify-end {
+    justify-content: flex-end;
+}
+
+.rq-row-justify-space-between {
+    justify-content: space-between;
+}
+
+.rq-row-justify-space-around {
+    justify-content: space-around;
+}

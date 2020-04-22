@@ -15,6 +15,7 @@
 自定义checkbox、
 自定义button、
 image、
+layout、
 cell单元格、
 Loading等
 
@@ -64,6 +65,9 @@ JS + CSS3 + iconfont等
 
 ### image
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/image-01.png" width="350" height="660"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/rqhansen/images/blob/master/js-demo/image-02.png" width="350" height="660"/>
+
+### layout
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/layout.png" width="350" height="660"/>
 
 ### cell单元格
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/cell.gif" width="350" height="660"/>
