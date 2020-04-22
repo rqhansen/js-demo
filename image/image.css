@@ -43,3 +43,8 @@
 .demo-image .rq-col {
     margin-bottom: 20px;
 }
+
+.rq-image-loading-icon ,
+.rq-image-error-icon {
+    font-size: 22px;
+}

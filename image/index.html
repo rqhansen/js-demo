@@ -6,6 +6,7 @@
     <title>image</title>
     <link rel="stylesheet" href="../public/css/reset.css">
     <link rel="stylesheet" href="../public/css/common.css">
+    <link rel="stylesheet" href="../public/iconfont/iconfont.css">
     <link rel="stylesheet" href="./image.css">
 </head>
 <body>
@@ -92,8 +93,17 @@
             </div>
         </div>
         <div class="rq-demo-block">
-            <h2 class="rq-demo-block-title">加载中</h2>
+            <h2 class="rq-demo-block-title">加载中提示</h2>
             <div class="rq-row">
+                <div class="rq-col rq-col-8" style="padding-left: 10px;padding-right: 10px;">
+                    <div class="rq-image" style="width: 100%;height: 27vw;">
+                        <img class="rq-image-img">
+                        <div class="rq-image-loading">
+                            <i class="rq-icon rq-image-loading-icon iconfont iconicon_photo"></i>
+                        </div>
+                    </div>
+                    <div class="text">默认提示</div>
+                </div>
                 <div class="rq-col rq-col-8" style="padding-left: 10px;padding-right: 10px;">
                     <div class="rq-image" style="width: 100%;height: 27vw;">
                         <img class="rq-image-img">
@@ -121,8 +131,16 @@
             </div>
         </div>
         <div class="rq-demo-block">
-            <h2 class="rq-demo-block-title">加载错误的提示</h2>
+            <h2 class="rq-demo-block-title">加载失败提示</h2>
             <div class="rq-row">
+                <div class="rq-col rq-col-8" style="padding-left: 10px;padding-right: 10px;">
+                    <div class="rq-image" style="width: 100%;height: 27vw;">
+                        <div class="rq-image-error">
+                            <i class="rq-icon rq-image-error-icon iconfont iconwarning"></i>
+                        </div>
+                    </div>
+                    <div class="text">默认提示</div>
+                </div>
                 <div class="rq-col rq-col-8" style="padding-left: 10px;padding-right: 10px;">
                     <div class="rq-image" style="width: 100%;height: 27vw;">
                         <div class="rq-image-error">加载失败</div>

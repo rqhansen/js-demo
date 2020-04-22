@@ -14,6 +14,7 @@
 自定义radio、
 自定义checkbox、
 自定义button、
+image、
 cell单元格、
 Loading等
 
@@ -61,11 +62,15 @@ JS + CSS3 + iconfont等
 ### 自定义button
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/custom-button.gif" width="350" height="660"/>
 
+### image
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/image-01.png" width="350" height="660"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/rqhansen/images/blob/master/js-demo/image-02.png" width="350" height="660"/>
+
 ### cell单元格
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/cell.gif" width="350" height="660"/>
 
 ### css导航栏下划线跟随效果
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/nav-follow-underline.gif" width="350" height="660"/>
+
 
 
 
