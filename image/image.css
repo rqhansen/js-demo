@@ -1,0 +1,45 @@
+.rq-image {
+    position: relative;
+    display: inline-block;
+}
+
+.rq-image-round {
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.rq-image-round img {
+    border-radius: inherit;
+}
+
+.rq-image-img,
+.rq-image-error,
+.rq-image-loading {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.rq-image-loading,
+.rq-image-error {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #969799;
+    font-size: 14px;
+    background-color: #f7f8fa;
+}
+.demo-image .text {
+    margin-top: 5px;
+    color: #646466;
+    font-size: 14px;
+    text-align: center;
+}
+
+.demo-image .rq-col {
+    margin-bottom: 20px;
+}

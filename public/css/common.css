@@ -34,11 +34,19 @@
 }
 /* 区域包裹层标题结束 */
 
+.rq-row {
+    padding: 0 16px;
+}
+
+.rq-row:after {
+    display: table;
+    clear: both;
+    content: '';
+}
 /* icon */
 
 .rq-icon {
     display: inline-block;
-
 }
 
 .rq-icon-left-icon,
@@ -86,6 +94,7 @@
 .rq-loading {
     font-size: 0;
     pointer-events: none;
+    color: #c8c9cc;
 }
 
 .rq-loading-spinner {
@@ -130,7 +139,7 @@
     width: 2px;
     height: 25%;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: currentColor;
     border-radius: 40%;
     content: '';
 }
@@ -222,3 +231,11 @@
 }
 
 /* 旋转动画 */
+
+.rq-col {
+    float: left;
+}
+
+.rq-col-8 {
+    width: 33.33333333%;
+}
