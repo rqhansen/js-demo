@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+/* CSS3去除移动端点击元素时产生的高亮背景色 */
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
 html,body {
     height: 100%;
     background-color: #fff;

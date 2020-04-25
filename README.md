@@ -17,6 +17,7 @@
 image、
 layout、
 cell单元格、
+分页、
 Loading等
 
 

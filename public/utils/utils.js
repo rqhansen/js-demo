@@ -28,6 +28,18 @@ function addEvent(obj,type,fn) {
 	}
 }
 
+function addClassName(el,claName) {
+	if(!el) throw new Error('element can not be empty');
+	if(!claName) throw new Error('className can not be empty');
+	!el.classList.contains(claName) && el.classList.add(claName);
+}
+
+function removeClassName(el,claName) {
+	if(!el) throw new Error('element can not be empty');
+	if(!claName) throw new Error('className can not be empty');
+	el.classList.contains(claName) && el.classList.remove(claName);
+}
+
 function getEleComputedStyle(ele) {
 	return window.getComputedStyle(ele,null);
 }
@@ -35,6 +47,11 @@ function getEleComputedStyle(ele) {
 function getEleById(id) {
 	if(!id) throw new Error('id can not be empty');
 	return document.getElementById(id);
+}
+
+function getElesByClassName(claName) {
+	if(!claName) throw new Error('className can not be empty');
+	return document.getElementsByClassName(claName);
 }
 
 function getClientHeight() {

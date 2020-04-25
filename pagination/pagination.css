@@ -1,0 +1,70 @@
+body {
+    background-color: #f7f8fa;
+}
+.demo-pagination .rq-pagination{
+    padding: 0 16px;
+}
+
+.rq-pagination {
+    display: flex;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.rq-pagination-item {
+    flex: 1;
+    min-width: 36px;
+    height: 40px;
+    color: #1989fa;
+    background-color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.rq-pagination-item:active {
+    background-color: #1989fa;
+    color: #fff;
+}
+
+.rq-pagination-item-active {
+    color: #fff;
+    background-color: #1989fa;
+}
+
+.rq-pagination-item-disabled,
+.rq-pagination-item-disabled:active {
+    background-color: #f7f8fa;
+    color: #646566;
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+.rq-pagination-item:after {
+    border-width: 1px 0 1px 1px;
+}
+
+.rq-pagination-item:last-child:after {
+    border-right-width: 1px;
+}
+
+/* 如果父元素宽度大于子元素宽度之和，则元素的宽度会重新计算，填满父元素宽，flex-grow：0话，不填满父元素宽*/
+.rq-pagination-page,
+.rq-pagination-dot { 
+    flex-grow: 0;
+}
+
+.rq-pagination-prev,
+.rq-pagination-next {
+    padding: 0 4px;
+}
+
+.rq-pagination-page-desc {
+    flex: 1;
+    height: 40px;
+    color: #646566;
+}
+
+.rq-pagination-item-hide {
+    display: none;
+}

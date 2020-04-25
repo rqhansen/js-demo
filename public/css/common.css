@@ -73,6 +73,10 @@
 /* icon结束 */
 
 /* 细边框(四边) */
+
+.rq-hairline {
+    position: relative;
+}
 .rq-hairline:after {
     position: absolute;
     content: '';
