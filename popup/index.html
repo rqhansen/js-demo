@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>Popup弹出层</title>
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/common.css">
+    <link rel="stylesheet" href="./popup.css">
+    <link rel="stylesheet" href="../public/iconfont/iconfont.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="rq-demo-nav-title">
+        <span>Popup</span>
+    </div>
+    <div class="rq-demo-section">
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title">基础用法</h2>
+            <div class="rq-cell-group">
+                <div role="button" class="rq-cell rq-cell-clickable">
+                    <div class="rq-cell-title">单元格</div>
+                    <i class="rq-icon rq-icon-right-icon iconfont iconarrow-right"></i>
+                </div>
+            </div>
+            <div class="rq-overlay" style="z-index:2009;display:none;opacity: 0;"></div>
+            <div class="rq-popup rq-popup-center" style="z-index: 2010;display: none;opacity: 0;padding: 30px 50px;">
+                内容
+            </div>
+        </div>
+        <div class="rq-demo-block">
+            <h2 class="rq-demo-block-title">弹出位置</h2>
+            <div class="rq-cell-group">
+                <div role="button" class="rq-cell rq-cell-clickable">
+                    <div class="rq-cell-title">顶部弹出</div>
+                    <i class="rq-icon rq-icon-right-icon iconfont iconarrow-right"></i>
+                </div>
+                <div role="button" class="rq-cell rq-cell-clickable">
+                    <div class="rq-cell-title">底部弹出</div>
+                    <i class="rq-icon rq-icon-right-icon iconfont iconarrow-right"></i>
+                </div>
+                <div role="button" class="rq-cell rq-cell-clickable">
+                    <div class="rq-cell-title">左侧弹出</div>
+                    <i class="rq-icon rq-icon-right-icon iconfont iconarrow-right"></i>
+                </div>
+                <div role="button" class="rq-cell rq-cell-clickable">
+                    <div class="rq-cell-title">右侧弹出</div>
+                    <i class="rq-icon rq-icon-right-icon iconfont iconarrow-right"></i>
+                </div>
+            </div>
+            <div class="rq-overlay" style="z-index: 2009;display:none;opacity: 0;"></div>
+            <div class="rq-popup" style="z-index:2010;display: none; height: 0;"></div>
+            <div class="rq-overlay" style="z-index: 2011;display:none;opacity: 0;"></div>
+            <div class="rq-popup" style="z-index:2012;display:none;width:0;"></div>
+        </div>
+    </div>
+    <script src="../public/utils/utils.js"></script>
+    <script src="./popup.js"></script>
+</body>
+</html>
