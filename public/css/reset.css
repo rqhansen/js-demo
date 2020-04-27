@@ -25,6 +25,11 @@ button {
 
 input {
     outline: none;
+    border: 0;
+}
+
+input:active {
+    outline: none;
 }
 
 li {
