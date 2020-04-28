@@ -12,6 +12,7 @@
 上拉加载、
 数字输入框、
 NumberKeyboard数字键盘、
+PasswordInput密码输入框
 popup、
 自定义radio、
 自定义checkbox、
@@ -54,6 +55,9 @@ JS + CSS3 + iconfont等
 
 ### NumberKeyboard数字键盘
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/number-keyboard.gif" width="350" height="660"/>
+
+### PasswordInput密码输入框
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/password-input.gif" width="350" height="660"/>
 
 ### popup
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/popup-01.gif" width="350" height="660"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/rqhansen/images/blob/master/js-demo/popup-02.gif" width="350" height="660"/>

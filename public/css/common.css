@@ -78,13 +78,13 @@
 .rq-hairline-top {
     position: relative;
 }
-.rq-hairline:after {
+[class*=rq-hairline]:after {
     position: absolute;
     content: '';
     pointer-events: none;
     top:-50%;
     right: -50%;
-    left: -51%;
+    left: -50%;
     bottom: -50%;
     transform: scale(.5);
     border: 0 solid #ebedf0;
@@ -96,6 +96,10 @@
 
 .rq-hairline-top:after {
     border-top-width: 1px;
+}
+
+.rq-hairline-left:after {
+    border-left-width: 1px;
 }
 /* 细边框结束 */
 
@@ -367,3 +371,15 @@
 
 .rq-slide-up-leave {
     animation: rq-slide-up-leave .3s both ease-in;
+}
+
+@keyframes rq-cursor-flicker {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
