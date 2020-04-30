@@ -14,13 +14,13 @@
 NumberKeyboard数字键盘、
 PasswordInput密码输入框
 popup、
+分页、
 自定义radio、
 自定义checkbox、
 自定义button、
 image、
 layout、
 cell单元格、
-分页、
 Loading等
 
 
@@ -61,6 +61,9 @@ JS + CSS3 + iconfont等
 
 ### popup
 <img src="https://github.com/rqhansen/images/blob/master/js-demo/popup-01.gif" width="350" height="660"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/rqhansen/images/blob/master/js-demo/popup-02.gif" width="350" height="660"/>
+
+### 分页
+<img src="https://github.com/rqhansen/images/blob/master/js-demo/pagination.gif" width="350" height="660"/>
 
 ### Loading
 
